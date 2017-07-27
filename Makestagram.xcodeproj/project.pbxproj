@@ -11,9 +11,10 @@
 		5E14A45C1F2A291100C6ADFF /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E14A45B1F2A291100C6ADFF /* UserService.swift */; };
 		5E14A45E1F2A3CB700C6ADFF /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E14A45D1F2A3CB700C6ADFF /* Constants.swift */; };
 		5E14A4621F2A7D5500C6ADFF /* Storyboard + Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E14A4611F2A7D5500C6ADFF /* Storyboard + Utility.swift */; };
+		5E14A4641F2A898B00C6ADFF /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E14A4631F2A898B00C6ADFF /* HomeViewController.swift */; };
+		5E14A4661F2A899D00C6ADFF /* FindFriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E14A4651F2A899D00C6ADFF /* FindFriendsViewController.swift */; };
 		5E736F071F27BD4700779D34 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E736F061F27BD4700779D34 /* LoginViewController.swift */; };
 		5E736F091F27D39600779D34 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E736F081F27D39600779D34 /* Login.storyboard */; };
-		5EA6F54B1F2675FF007FE420 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA6F54A1F2675FF007FE420 /* ViewController.swift */; };
 		5EA6F54D1F26760C007FE420 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5EA6F54C1F26760C007FE420 /* GoogleService-Info.plist */; };
 		5EA6F5511F267628007FE420 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5EA6F5501F267628007FE420 /* LaunchScreen.storyboard */; };
 		5EA6F5531F267630007FE420 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5EA6F5521F267630007FE420 /* Main.storyboard */; };
@@ -29,9 +30,10 @@
 		5E14A45B1F2A291100C6ADFF /* UserService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserService.swift; path = Makestagram/Services/UserService.swift; sourceTree = "<group>"; };
 		5E14A45D1F2A3CB700C6ADFF /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = Supporting/Constants.swift; sourceTree = "<group>"; };
 		5E14A4611F2A7D5500C6ADFF /* Storyboard + Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Storyboard + Utility.swift"; path = "Extensions/Storyboard + Utility.swift"; sourceTree = "<group>"; };
+		5E14A4631F2A898B00C6ADFF /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeViewController.swift; path = Controllers/HomeViewController.swift; sourceTree = "<group>"; };
+		5E14A4651F2A899D00C6ADFF /* FindFriendsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FindFriendsViewController.swift; path = Controllers/FindFriendsViewController.swift; sourceTree = "<group>"; };
 		5E736F061F27BD4700779D34 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = Controllers/LoginViewController.swift; sourceTree = "<group>"; };
 		5E736F081F27D39600779D34 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Login.storyboard; path = Storyboards/Login.storyboard; sourceTree = "<group>"; };
-		5EA6F54A1F2675FF007FE420 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = Controllers/ViewController.swift; sourceTree = "<group>"; };
 		5EA6F54C1F26760C007FE420 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "Supporting/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5EA6F54E1F267617007FE420 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Supporting/Info.plist; sourceTree = "<group>"; };
 		5EA6F5501F267628007FE420 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = Storyboards/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -106,8 +108,9 @@
 			isa = PBXGroup;
 			children = (
 				5E736F061F27BD4700779D34 /* LoginViewController.swift */,
-				5EA6F54A1F2675FF007FE420 /* ViewController.swift */,
 				5EDB0ABD1F291FF3008D110A /* CreateUsernameViewController.swift */,
+				5E14A4631F2A898B00C6ADFF /* HomeViewController.swift */,
+				5E14A4651F2A899D00C6ADFF /* FindFriendsViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -291,8 +294,9 @@
 				5EDB0ABC1F2913F6008D110A /* User.swift in Sources */,
 				5E736F071F27BD4700779D34 /* LoginViewController.swift in Sources */,
 				5E14A45E1F2A3CB700C6ADFF /* Constants.swift in Sources */,
+				5E14A4641F2A898B00C6ADFF /* HomeViewController.swift in Sources */,
 				5E14A45C1F2A291100C6ADFF /* UserService.swift in Sources */,
-				5EA6F54B1F2675FF007FE420 /* ViewController.swift in Sources */,
+				5E14A4661F2A899D00C6ADFF /* FindFriendsViewController.swift in Sources */,
 				5E14A4621F2A7D5500C6ADFF /* Storyboard + Utility.swift in Sources */,
 				5EDB0ABE1F291FF3008D110A /* CreateUsernameViewController.swift in Sources */,
 				5EFA7C5F1F2647F800BE544E /* AppDelegate.swift in Sources */,
