@@ -1,6 +1,6 @@
 //
 //  LoginViewController.swift
-//  
+//
 //
 //  Created by adyao20 on 7/25/17.
 //
@@ -15,14 +15,14 @@ import FirebaseDatabase
 typealias FIRUser = FirebaseAuth.User
 
 class LoginViewController: UIViewController {
-
+    
     @IBOutlet weak var loginButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -43,15 +43,15 @@ class LoginViewController: UIViewController {
         print("login button tapped")
     }
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destinationViewController.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }
 
 extension LoginViewController: FUIAuthDelegate {
@@ -68,18 +68,18 @@ extension LoginViewController: FUIAuthDelegate {
         let userRef = Database.database().reference().child("users").child(user.uid)
         
         // 3
-        userRef.observeSingleEvent(of: .value, with: { (snapshot) in
-            // retrieve user data from snapshot
-            // 1
-            userRef.observeSingleEvent(of: .value, with: { [unowned self] (snapshot) in
-                if let user = User(snapshot: snapshot) {
-                    print("Welcome back, \(user.username).")
-                } else {
-                    self.performSegue(withIdentifier: "toCreateUsername", sender: self)
+        userRef.observeSingleEvent(of: .value, with: { [unowned self] (snapshot) in
+            if let user = User(snapshot: snapshot) {
+                User.setCurrent(user)
+                
+                let storyboard = UIStoryboard(name: "Main", bundle: .main)
+                if let initialViewController = storyboard.instantiateInitialViewController() {
+                    self.view.window?.rootViewController = initialViewController
+                    self.view.window?.makeKeyAndVisible()
                 }
-            })
-        
-        print("handle user signup / login")
-    }
-        )}
+            } else {
+                self.performSegue(withIdentifier: "toCreateUsername", sender: self)
+            }
+        })
+        }
 }
